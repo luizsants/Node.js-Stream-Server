@@ -24,25 +24,6 @@ export const routes = [
       return res.end(JSON.stringify(tasks));
     },
   },
-  //   {
-  //     method: "POST",
-  //     path: buildRoutePath("/tasks"),
-  //     handler: (req, res) => {
-  //       const { title, description } = req.body;
-
-  //       const task = {
-  //         id: randomUUID(),
-  //         title,
-  //         description,
-  //         completed_at: null,
-  //         created_at: new Date(),
-  //       };
-
-  //       db.insert("tasks", task);
-
-  //       return res.writeHead(201).end();
-  //     },
-  //   },
   {
     method: "POST",
     path: buildRoutePath("/tasks"),
@@ -56,14 +37,6 @@ export const routes = [
             .writeHead(400)
             .end("Invalid input. Expected an array of tasks.");
         }
-
-        // if (typeof tasks === 'object' && tasks !== null) {
-        //   console.error("Invalid input: tasks is not an array", tasks);
-        //   return res
-        //     .writeHead(400)
-        //     .end("Invalid input. Expected an array of tasks.");
-        // }
-        
         tasks.forEach((taskData) => {
           const { title, description } = taskData;
 
