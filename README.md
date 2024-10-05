@@ -1,2 +1,5 @@
-# Node.js-Stream-Server
-CRUD with stream that handle upload of a csv file  
+CRUD with stream that handle upload of csv file
+
+npm i npm run dev
+
+*open a new terminal and run node ./streams/file-uploader.js
